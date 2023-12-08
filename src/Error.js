@@ -1,4 +1,3 @@
-// ErrorPage.js
 import React from 'react';
 
 const ErrorPage = ({ message }) => {

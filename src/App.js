@@ -10,13 +10,15 @@ function App() {
   const [error, setError] = useState(null);
 
   const handleLogin = (username, password) => {
-    // Here, add logic to validate login credentials
-    // If there's an error, set the error state
-    // For example:
-    // setError('Incorrect username or password');
-    // Otherwise, set isLoggedIn to true
-    setIsLoggedIn(true);
+    if (username === 'example' && password === 'password') {
+          setIsLoggedIn(true);
+              setError(null);
+    } else {
+      setError('Incorrect username or password');
+      setIsLoggedIn(false);
+    }
   };
+  
 
   const handleLogout = () => {
     setIsLoggedIn(false);
