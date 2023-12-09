@@ -10,10 +10,10 @@
 }
 
 input[type="text"], input[type="password"] {
-  width: calc(200px - 22px); / Adjust for padding /
+  width: calc(200px - 22px); /* Adjust for padding */
   margin-bottom: 10px;
+}
 
-  }
 
 button {
   background-color: #4CAF50;

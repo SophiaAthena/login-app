@@ -11,14 +11,13 @@ function App() {
 
   const handleLogin = (username, password) => {
     if (username === 'example' && password === 'password') {
-          setIsLoggedIn(true);
-              setError(null);
+      setIsLoggedIn(true);
+      setError(null);
     } else {
       setError('Incorrect username or password');
       setIsLoggedIn(false);
     }
   };
-  
 
   const handleLogout = () => {
     setIsLoggedIn(false);
@@ -33,7 +32,7 @@ function App() {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>
-              Hello <code>src/App.js</code> and save to reload.
+              {isLoggedIn ? <Logout onLogout={handleLogout} /> : <Login onLogin={handleLogin} />}
             </p>
             <a
               className="App-link"
@@ -44,10 +43,6 @@ function App() {
               Learn React
             </a>
           </header>
-
-          <div>
-            {isLoggedIn ? <Logout onLogout={handleLogout} /> : <Login onLogin={handleLogin} />}
-          </div>
         </>
       )}
     </div>
